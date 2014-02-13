@@ -1,0 +1,91 @@
+===========  Semana 1: ==============
+- Lunes (Algoritmos básicos de camino mínimo)
+Grafos. Representaciones explícitas de grafos en memoria (matriz de adyacencia, matriz de incidencia, listas de adyacencia, lista de incidencia)
+Noción de trabajar sobre un grafo implícito sin necesidad de representarlo en memoria explícitamente.
+Recorrido de grafos. Descripción breve de DFS.
+Algoritmos de camino mínimo:
+BFS (aristas con peso 1), BFS con cola de dos puntas (aristas con pesos 0 y 1), BFS con K+1 bolsas (aristas con pesos 0..K)
+Algoritmo de Floyd. Modificación para contar cantidad de caminos entre pares de nodos.
+
+Algunos oroblemas de ejemplo dados en clase:
+> "SUBTE" (nacional de OIA 2007)
+> Problema D de la CIIC 2012
+> Problema túneles del selectivo de IOI 2012
+
+- Martes (más camino mínimo y algunas estructuras de datos básicas)
+Dijkstra: Implementacion en O(N^2) y en O((N+M) lg N) (Problema de arbitraje en el cambio de monedas, distancia min-max)
+Floyd
+Reconstrucción del camino guardando "padres", o haciendo la cuentita de la programación dinámica para ver el siguiente candidato en el camino
+Truco de dar vuelta origen y destino (y trasponer el grafo si es dirigido) para que al reconstruir el camino quede al derecho directamente
+Ciclos negativos: Deteccion y tratamiento con el algoritmo de Floyd
+Complejidades de los algoritmos de camino minimo visto, resumen de cuando convendria usar cada uno en base a las complejidades.
+Estruturas de datos básicas: Pilas, colas, listas enlazadas, arreglos
+Cola de prioridad: heap, heapsort, heapify en O(N)
+Tablitas aditivas (calculo de la suma de un subrectangulo de una matriz en O(1))
+Busqueda binaria
+
+- Miercoles (Grafos: Árboles y DFS)
+
+Union Find (Implementacion con listas para cada componente, con tiempo amortizado O(lg N))
+Algoritmos de Prim y Kruskal para arbol generador minimo
+Relacion entre algoritmo de Prim y Dijkstra 
+Distancia min-max todos contra todos más rápido que con Floyd (Usando union find)
+Arboles: Radio, centro y diámetro de árboles en tiempo lineal (problema "ambulancias" de OIA).
+DFS: Clasificación de las aristas en tree-edges y back-edges en un recorrido de DFS.
+Deteccion de puntos de articulacion y puentes usando los conceptos de DFS explicados.
+
+- Jueves (DAGs y mas estructuras de datos)
+
+Concepto de DAG (Directed Acyclic Graph) y su importancia.
+Orden topologico. Caracterizacion de DAG como grafo dirigido que admite un orden topologico.
+Clausura transitiva: Algoritmo de Warshall.
+Ejemplo: Agregar la minima cantidad de ejes a un grafo dirigido para que quede fuertemente conexo.
+Estructuras de datos: Tries, y estructura de segment-tree completo sobre arreglo (para resolver Range Minimum Query y similares)
+
+- Viernes
+
+Vectores: Operaciones basicas, suma, resta, producto cruz, producto interno
+Area de triangulo y paralelogramo dados los vertices. Deteccion del sentido de giro.
+Ejemplo de problema de IOI: Separar arboles en dos mitades con la misma cantidad usando una recta.
+Area de poligonos. Chequeo de punto en poligono. Chequeo de punto en segmento o en recta.
+Capsula convexa: Algoritmo basico cuadratico y Graham Scan.
+Problema ilustrativo: Par de puntos mas cercano en el plano con dos metodos (Divide & Conquer y Sweep Line)
+Problema ilustrativo: Par de puntos mas lejano en el plano, calculando convex hull y usando dos punteros deslizantes.
+Problema ilustrativo: Joining Dots, IOI Mexico 2006
+
+===========  Semana 2: ==============
+- Lunes (Busqueda exhaustiva)
+Fuerza bruta. Backtracking. Comparacion entre backtracking y Fuerza bruta.
+Ejemplos de backtracking e implementaciones tipicas. Problema de las n reinas.
+Subset sum, traveling salesman problem, camino hamiltoniano (por ejemplo caballo en un tablero de ajedrez).
+Problema "mosaicos" de selectivo de OIA 2007. Podas genericamente utiles.
+Algoritmo de Minimax para juegos, aplicacion al problema IOI Wari de la IOI de finlandia.
+
+- Martes al Viernes (Programacion Dinamica)
+
+Concepto general de programacion dinamica. Principio del optimo. Superposicion de problemas. Visualizacion de la programacion dinamica
+como un proceso de construccion de la solucion, con estados que codifican la informacion relevante para poder tomar decisiones, y un
+DAG de llamadas entre estados.
+
+Ejemplos:
+> Bajar y caminar a la derecha en una matriz para recolectar maxima cantidad de frutillas
+> Mismo problema con mas restricciones (por ejemplo, solo se puede usar un movimiento especial de subir hasta 3 veces)
+> Subset sum. Problema de la mochila, variantes.
+> Dar vuelto con minima cantidad de monedas.
+> Maxima subsecuencia creciente. Problema "Black or White" de la local de la UBA 2009.
+> Calculo de substrings palindromos de un string.
+> Calculo del triangulo de pascal
+> Distancia de edicion. Distancia de edicion con variantes: Costos distintos, vale intercambiar letras adyacentes
+Dinamicas sobre rangos:
+> Problema "Demoliendo Muros" nacional 2004
+> Producto de matrices con costo minimo
+> Problema "Valle de Mexico" de la IOI 2006
+> Problema "oficinas" del selectivo de IOI 2012
+> Minima cantidad de cambios a un string de {[()]} para dejar una secuencia bien parenteseada
+Dinamicas con subconjuntos/mascaras de bits:
+> Traveling salesman problem
+> Problema Radiaciones, selectivo de IOI 2009
+> Problema Calcetines, selectivo de IOI 2007
+Dinamicas con frente:
+> Problema "mosaicos" de selectivo de OIA 2007
+> Cantidad de formas de cubrir un tablero con dominos
